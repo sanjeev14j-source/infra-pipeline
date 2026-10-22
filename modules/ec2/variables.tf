@@ -13,7 +13,7 @@ variable "subnet_id" {
   type        = string
 }
 
-variable "count" {
+variable "instance_count" {
   description = "The number of EC2 instances to launch"
   type        = number
 }
