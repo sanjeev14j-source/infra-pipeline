@@ -26,12 +26,12 @@ pipeline {
             steps {
                 dir("${TF_WORKDIR}") {
                     sh 'terraform plan -out=tfplan'
-                    sh 'terraform show non-color tfplan > tfplan.txt'
+                    sh 'terraform show nogit add Jenkinsfile-color tfplan > tfplan.txt'
                     sh 'cat tfplan.txt'
                 }
             }
         }
-        
+
         stage('Approve') {
             steps {
                 input message: "Do you want to proceed with the deployment?", ok: "Deploy"
