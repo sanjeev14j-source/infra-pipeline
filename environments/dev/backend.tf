@@ -8,7 +8,7 @@ terraform {
   backend "s3" {
     bucket = "terraform-buckets-sanjeev"
     key    = "environments/dev/terraform.tfstate"
-    region = "us-south-1"
+    region = "ap-south-1"
   }
 }
 
