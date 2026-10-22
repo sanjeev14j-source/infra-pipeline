@@ -1,3 +1,4 @@
+/*
 module "vpc" {
   source = "../../modules/vpc"
 
@@ -15,3 +16,4 @@ module "ec2" {
   subnet_id     = module.vpc.subnet_id
   instance_count = 2
 }
+*/
