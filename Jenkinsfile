@@ -26,7 +26,7 @@ pipeline {
             steps {
                 dir("${TF_WORKDIR}") {
                     sh 'terraform plan -out=tfplan'
-                    sh 'terraform show nogit add Jenkinsfile-color tfplan > tfplan.txt'
+                  sh 'terraform show -no-color tfplan > tfplan.txt'
                     sh 'cat tfplan.txt'
                 }
             }
